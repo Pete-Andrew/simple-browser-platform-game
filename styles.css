@@ -1,0 +1,18 @@
+ body{
+    
+   background: rgb(38, 160, 109);
+    
+   text-align: center;
+   overflow: hidden; /*Hide scroll bars*/
+   height: 100vh;
+
+  }
+
+canvas {
+   position: absolute;
+   top: 50%; 
+   left: 50%;
+   transform: translate(-50%, -50%);
+   
+}
+
