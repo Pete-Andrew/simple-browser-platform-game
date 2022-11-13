@@ -24,10 +24,13 @@ class Player {
     }
     
     update () {
+        this.position.x += this.velocity.x
         this.position.y += this.velocity.y                          //increases velocity 
+        this.sides.bottom =  this.position.y + this.height      //checks relation to the bottom of the canvas
+        
         if (this.sides.bottom + this.velocity.y < canvas.height) {
            this.velocity.y += this.gravity                                    //causes the box to drop 
-           this.sides.bottom =  this.position.y + this.height      //checks relation to the bottom of the canvas
-        } else this.velocity.y =0
+           
+        } else this.velocity.y = 0
     }
 }
