@@ -30,7 +30,10 @@ function animate() {
     window.requestAnimationFrame(animate)
     
     backgroundLevel1.draw()
-   
+    collisionBlocks.forEach(collisionBlock => { 
+        collisionBlock.draw()
+    })
+
     player.velocity.x = 0 //starts the player with x axis movement =0
     if (keys.d.pressed) player.velocity.x = 5
     else if (keys.a.pressed) player.velocity.x = -5
