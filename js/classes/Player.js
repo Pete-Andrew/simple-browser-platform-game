@@ -4,8 +4,8 @@ class Player {
         })
         {
             this.position = {
-            x: 300,            
-            y: 300,  
+            x: 200,            
+            y: 200,  
         }
 
         this.velocity = {
@@ -52,10 +52,10 @@ class Player {
             }
         }
         // applies gravity
-        this.sides.bottom =  this.position.y + this.height  
+          
         this.velocity.y += this.gravity   
         this.position.y += this.velocity.y                          //increases velocity 
-        
+        //this.sides.bottom =  this.position.y + this.height
         // check for vertical collisions
         
         for (let i = 0; i < this.collisionBlocks.length ; i++ ) 
@@ -74,7 +74,7 @@ class Player {
                 }
                 if (this.velocity.y > 0) {
                     this.velocity.y = 0
-                    this.position.y = collisionBlock.position.x - this.height - 0.01
+                    this.position.y = collisionBlock.position.y - this.height - 0.01
                     break
                 }
             }
